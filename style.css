@@ -1,0 +1,191 @@
+:root {
+  --gris: #4d4e53;
+  --azul: #303ED1;
+  --menu: #b8797e;
+  --amarillo: #E0DDBA;
+  --opalo:#8DB5B2;
+  --piscina:#91FFF6;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: var(--gris);
+  margin: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--menu);
+  border-bottom: 2px solid black;
+}
+#navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 10px;
+}
+#navbar li {
+  list-style: none;
+  padding: 20px 10px;
+  font-size: 1.2em;
+}
+#navbar li:hover{
+    background-color: var(--azul);
+    transition: background 0.3s ease-out;
+}
+#navbar a {
+  color: #e0ddba;
+}
+
+#welcome-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azul);
+}
+#welcome-section h1 {
+    color: white;
+    font-size: 4em;
+}
+#welcome-section p{
+    font-weight:100;
+    color: var(--menu);
+    font-size: 2em;
+}
+#projects{
+    background-color: var(--amarillo);
+    padding: 50px 20px;
+}
+#projects h2{
+    font-size: 2em;
+border-bottom: 2px solid;
+text-align: center;
+margin: 0 auto 80px auto;
+width: fit-content;
+padding: 0 2em 0.3em 2em;
+}
+.rejilla{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    /* margin-bottom: 6rem; */
+}
+.project-tile{
+    /* display: flex; */
+    /* flex-direction: column; */
+    background-color: var(--menu);
+}
+.project-tile img{
+    width: 100%;
+}
+.project-tile p{
+    text-align: center;
+    padding: 0.7em 0;
+    font-size: 1.2em;
+}
+.project-tile .code{
+    color: var(--menu);
+    font-weight: bold;
+  transition: color .5s ease-out;
+
+
+}
+.project-tile:hover .code {
+    color:var(--azul)
+    
+}
+#profile-link{
+    margin: 70px auto 30px auto;
+    background-color: var(--azul);
+    display: block;
+    padding: 0.5em 0.7em;
+    width: fit-content;
+    color: white;
+  transition: background 0.3s ease-out;
+
+}
+#profile-link:hover{
+    background-color: var(--menu);
+}
+#profile-link i{
+    color: white;
+}
+#profile-link:hover i{
+    transform: translateX(2px);
+  transition: transform 0.3s ease-out;
+
+
+}
+.projects:hover .code {
+    color: #ff7f50;
+  }
+#contact{
+    background-color: var(--opalo);
+    padding-bottom: 50px;
+}
+  #contact h2{
+display: block;
+/* background-color: red; */
+text-align: center;
+padding: 1em 0 0.2em 0;
+font-size: 3em;
+  }
+
+  #contact p{
+      font-style: italic;
+      display: block;
+      padding: 0.5em;
+      text-align: center;
+  }
+
+  #social{
+      margin: 50px 20px 0 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* background-color: wheat; */
+    }
+    #social a{
+      margin: 0.5em;
+      /* background-color: var(--menu); */
+      font-size: 1.5em;
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      min-width: fit-content;
+      text-shadow: 2px 2px 1px #ffffff3b
+      
+
+  }
+  #social a:hover{
+transform: translateY(8px);
+transition: transform 0.5s ease-out ;
+  }
+  #social i{
+      padding: 0.2em;
+      display: block;
+  }
+
+  @media only screen and (max-width:750px){
+      .project-tile{
+          max-width: 300px;
+        }
+        .rejilla{
+          justify-items: center;
+
+      }
+  }
